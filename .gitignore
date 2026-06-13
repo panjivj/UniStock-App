@@ -1,1 +1,15 @@
 .claude/
+
+# Konfigurasi sensitif
+bootstrap.php
+
+# Database dump
+database/*.sql
+
+# File upload pengguna
+assets/img/uploads/
+
+# File lokal
+note.md
+backup.bat
+install.bat
