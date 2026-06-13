@@ -31,7 +31,7 @@ done
 
 echo "Memastikan nama institusi default aman..."
 "${COMPOSE[@]}" exec -T db mariadb -uunistock -punistock unistock \
-  -e "UPDATE settings SET value='Universitas Nusantara' WHERE \`key\`='university_name';"
+  -e "UPDATE settings SET value='Universitas Esa Unggul' WHERE \`key\`='university_name';"
 
 echo
 echo "UniStock sudah berjalan."
