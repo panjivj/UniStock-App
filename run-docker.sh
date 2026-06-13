@@ -29,6 +29,10 @@ until "${COMPOSE[@]}" exec -T db mariadb-admin ping -h localhost -uroot -proot -
   sleep 2
 done
 
+echo "Memastikan nama institusi default aman..."
+"${COMPOSE[@]}" exec -T db mariadb -uunistock -punistock unistock \
+  -e "UPDATE settings SET value='Universitas Nusantara' WHERE \`key\`='university_name';"
+
 echo
 echo "UniStock sudah berjalan."
 echo "URL aplikasi : ${APP_URL}"
